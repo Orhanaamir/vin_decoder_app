@@ -97,11 +97,7 @@ class HistoryController extends Controller
 
     public function history2(){
         if(isset($_GET['vin'])){
-            $user = "mike@chromacars.com";
-            $password = "ctxc0d3";
-            $format = "json";
-            $key = "0C93DAXV2Z6PEJN";
-            $mode = "test";
+            
         $url = 'http://api.vinaudit.com/v2/pullreport?format='.$format.'&include=recalls&key='.$key.'&vin='.$_GET['vin'];
         $curl = curl_init();
         curl_setopt_array($curl, array(
