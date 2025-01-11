@@ -23,11 +23,7 @@ class HistoryController extends Controller
             if($vin_exists){
                 return response()->json(['vin_exist' => 'Report already exists against this VIN for this account', 'Status' => '0']);
             } else {
-            $user = "mike@chromacars.com";
-            $password = "ctxc0d3";
-            $format = "json";
-            $key = "0C93DAXV2Z6PEJN";
-            $mode = "test";
+            
             
             // Construct API URL
             $url_vin = 'http://api.vinaudit.com/v2/pullreport?format='.$format.'&key='.$key.'&user='.$user.'&pass='.$password.'&mode='.$mode.'&vin='.$_POST['vin'];
